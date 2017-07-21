@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  flex-basis: auto;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 2.6rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10rem;
+  width: 100vw;
+}
+
+dialog,
+dialog::backdrop {
+  animation-duration: 0.25s;
+  animation-name: fade-in;
+}
+
+dialog {
+  border: none;
+  border-radius: 0.5rem;
+  bottom: 0;
+  left: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: auto;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40rem;
+  z-index: 1;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+dialog button[name=close] {
+  border-radius: 0;
+  font-size: 1.5em;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+dialog h2,
+dialog p {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 10rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 2;
+  text-align: justify;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+  background-color: #f4848c;
+  background-image: none;
+  border: none;
+  border-radius: 0.6rem;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  outline: none;
+  padding: 2.4rem;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+button[disabled],
+input[type=button][disabled],
+input[type=submit][disabled] {
+  background-color: lightgrey;
+}
+
+.hero {
+  align-items: center;
+  background-image: url('/assets/hero.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details div {
+  flex-basis: 25%;
+}
+
+
+
+
+
+/* mailchimp stuff */
+#mc_embed_signup_scroll {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+#mc_embed_signup_scroll .response {
+  border-radius: 0.5rem;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 2;
+  padding: 2rem;
+}
+
+#mc_embed_signup_scroll #mce-error-response:empty,
+#mc_embed_signup_scroll #mce-success-response:empty {
+  display: none;
+}
+
+#mc_embed_signup_scroll #mce-error-response {
+  background-color: orangered;
+  color: white;
+}
+
+#mc_embed_signup_scroll #mce-success-response {
+  background-color: palegreen;
+}
+
+#mc_embed_signup_scroll label {
+  align-items: center;
+  display: flex;
+}
+
+#mc_embed_signup_scroll .indicates-required {
+  display: none;
+}
+
+#mc_embed_signup_scroll .mc-field-group {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 1rem;
+}
+
+#mc_embed_signup_scroll .mc-field-group label {
+  grid-column: 1;
+}
+
+#mc_embed_signup_scroll .mc-field-group input {
+  grid-column: 2;
+}
+
+#mc_embed_signup_scroll .mc-field-group .mce_inline_error {
+  border-color: initial;
+}
+
+#mc_embed_signup_scroll .mc-field-group .mce_inline_error:not(input) {
+  background-color: orangered;
+  border-radius: 0.5rem;
+  color: white;
+  grid-column: span 2;
+}
+
+
+
+
+
+@media (max-width: 2100px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  main {
+    padding: 5rem;
+  }
+
+  button,
+  input[type=button],
+  input[type=submit] {
+    border-radius: 0.2rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+@media (max-width: 800px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  main {
+    overflow: auto;
+  }
+
+  .hero {
+    min-height: 10rem;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+
+  .details div {
+    flex-basis: auto;
+    margin-bottom: 5rem;
+  }
+}
+
+
+
+
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  dialog {
+    border-radius: 0;
+    width: 100vw;
+  }
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -106,7 +106,7 @@ input[type=submit][disabled] {
 
 .hero {
   align-items: center;
-  background-image: url('/assets/hero.png');
+  background-image: url('assets/hero.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

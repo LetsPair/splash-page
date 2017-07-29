@@ -29,22 +29,19 @@
     <div>
       <h2>Get Help</h2>
 
-      <p>Programming is hard. Levelling up at programming is even harder. Get help from others to tackle that mind-bending architectural
-        design issue</p>
+      <p>Programming is hard. Levelling up at programming is even harder. Get help from others to tackle that mind-bending architectural design issue</p>
     </div>
 
     <div>
       <h2>Give Help</h2>
 
-      <p>You know your stuff, right? So why not share it? <a href="https://en.wikipedia.org/wiki/Docendo_discimus">By teaching, we learn</a>,
-        so get out there and help somebody level up!</p>
+      <p>You know your stuff, right? So why not share it? <a href="https://en.wikipedia.org/wiki/Docendo_discimus">By teaching, we learn</a>, so get out there and help somebody level up!</p>
     </div>
 
     <div>
       <h2>Make Friends</h2>
 
-      <p>The best kind of friends are those you share interests with! Let's Pair will connect you with programmers that share
-        your interests. Let's get social!</p>
+      <p>The best kind of friends are those you share interests with! Let's Pair will connect you with programmers that share your interests. Let's get social!</p>
     </div>
   </section>
 </main>
@@ -54,13 +51,11 @@
 
   <h2>Sign up for the beta!</h2>
 
-  <p>Don't worry, we won't be sharing your email address with anybody else and we promise not to sell your data. All we want
-    to do is ensure that Let's Pair launches with a vibrant community that's looking to help each other grow!</p>
+  <p>Don't worry, we won't be sharing your email address with anybody else and we promise not to sell your data. All we want to do is ensure that Let's Pair launches with a vibrant community that's looking to help each other grow!</p>
 
   <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup">
-    <form action="//trezy.us4.list-manage.com/subscribe/post?u=96f2286b779711e0ba0565801&amp;id=3d507dc43a" method="post" id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form action="//trezy.us4.list-manage.com/subscribe/post?u=96f2286b779711e0ba0565801&amp;id=3d507dc43a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
         <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
         <div class="mc-field-group">
@@ -76,7 +71,13 @@
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_96f2286b779711e0ba0565801_3d507dc43a" tabindex="-1" value=""></div>
 
         <div class="clear">
-          <input disabled type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+          <input
+                 disabled
+                 type="submit"
+                 value="Subscribe"
+                 name="subscribe"
+                 id="mc-embedded-subscribe"
+                 class="button">
         </div>
 
         <div class="response" id="mce-error-response" style="display:none"></div>
@@ -97,29 +98,28 @@
 </div>
 
 <script>
-    let dialog = document.querySelector('dialog')
-    let dialogCloseButton = document.querySelector('dialog button[name=close]')
-    let emailInput = document.querySelector('#mc_embed_signup input[name=EMAIL]')
-    let signupButton = document.querySelector('button[name=signup]')
-    let subscribeButton = document.querySelector('#mc_embed_signup input[name=subscribe]')
+  let dialog = document.querySelector('dialog')
+  let dialogCloseButton = document.querySelector('dialog button[name=close]')
+  let emailInput = document.querySelector('#mc_embed_signup input[name=EMAIL]')
+  let signupButton = document.querySelector('button[name=signup]')
+  let subscribeButton = document.querySelector('#mc_embed_signup input[name=subscribe]')
 
-    dialogPolyfill.registerDialog(dialog)
+  dialogPolyfill.registerDialog(dialog)
 
-    emailInput.addEventListener('input', event => {
-      if (!event.target.validity.valid) {
-        subscribeButton.setAttribute('disabled', true)
+  emailInput.addEventListener('input', event => {
+    if (!event.target.validity.valid) {
+      subscribeButton.setAttribute('disabled', true)
 
-      } else {
-        subscribeButton.removeAttribute('disabled')
-      }
-    })
+    } else {
+      subscribeButton.removeAttribute('disabled')
+    }
+  })
 
-    dialogCloseButton.addEventListener('click', () => {
-      dialog.close()
-    })
+  dialogCloseButton.addEventListener('click', () => {
+    dialog.close()
+  })
 
-    signupButton.addEventListener('click', () => {
-      dialog.showModal()
-    })
-
+  signupButton.addEventListener('click', () => {
+    dialog.showModal()
+  })
 </script>
